@@ -1,0 +1,28 @@
+extends ../layout 
+
+block content
+    section#nuevaBici.page-section
+        .container
+            a(href='/bicicletas')
+                i.fas.fa-arrow-left
+            .text-center
+                h2.section-heading.text-uppercase AGREGAR UNA BICI
+            form#nuevaBiciForm(action='/bicicletas/create' method='post')
+                .row.align-items-stretch.mb-5
+                    .col-md-12
+                        .form-group
+                            input.form-control(type='text' placeholder='ID *' name='id')
+                        .form-group
+                            input.form-control(type='text' placeholder='Color *' name='color')
+                        .form-group
+                            input.form-control(type='text' placeholder='Modelo *' name='modelo')
+                    .col-md-6
+                        .form-group
+                            input.form-control(type='text' placeholder='Latitud *' name='lat')
+                    .col-md-6
+                        .form-group
+                            input.form-control(type='text' placeholder='Longitud *' name='lng')
+                .text-center
+                    #success
+                    button.btn.btn-primary.btn-xl.text-uppercase(type='submit') OK
+                

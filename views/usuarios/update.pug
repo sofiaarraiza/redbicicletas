@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    section#nuevoUsuario.page-section
+        .container
+            a(href='/usuarios')
+                i.fas.fa-arrow-left
+            .text-center
+                h2.section-heading.text-uppercase EDITAR UN USUARIO
+            form#nuevoUsuarioForm(action=`/usuarios/${usuario.id}/update` method='post')
+                .row.align-items-stretch.mb-5
+                    .col-md-12
+                        .form-group
+                            input.form-control(type='text' value=usuario.nombre name='nombre')
+                        .form-group
+                            input.form-control(type='text' value=usuario.email name='email')
+                .text-center
+                    #success
+                    button.btn.btn-primary.btn-xl.text-uppercase(type='submit') OK
+
+

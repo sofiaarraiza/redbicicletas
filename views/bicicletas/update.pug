@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    section#nuevaBici.page-section
+        .container
+            a(href='/bicicletas')
+                i.fas.fa-arrow-left
+            .text-center
+                h2.section-heading.text-uppercase EDITAR UNA BICI
+            form#nuevaBiciForm(action=`/bicicletas/${bicicleta._id}/update` method='post')
+                .row.align-items-stretch.mb-5
+                    .col-md-12
+                        .form-group
+                            input.form-control(type='text' value=bicicleta.color name='color')
+                        .form-group
+                            input.form-control(type='text' value=bicicleta.modelo name='modelo')
+                    .col-md-6
+                        .form-group
+                            input.form-control(type='text' value=bicicleta.ubicacion[0] name='lat')
+                    .col-md-6
+                        .form-group
+                            input.form-control(type='text' value=bicicleta.ubicacion[1] name='lng')
+                .text-center
+                    #success
+                    button.btn.btn-primary.btn-xl.text-uppercase(type='submit') OK
+
+

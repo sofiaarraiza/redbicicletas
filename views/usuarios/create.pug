@@ -1,0 +1,38 @@
+extends ../layout 
+
+block content
+    section#nuevoUsuario.page-section
+        .container-fluid.bg-white
+            .row
+                .col-md-6.bg-pattern
+                .col-md-6.padding-70
+                    .row
+                        .col-md-9.margin-auto
+                            h4.section-heading.text-uppercase.margin-bottom BIENVENIDX!
+                            form#nuevoUsuarioForm(action='/usuarios/create' method='post')
+                                .row.align-items-stretch
+                                    .col-md-12
+                                        .form-group
+                                            input.form-control(type='text' placeholder='Nombre *' name='nombre' value=usuario.nombre class=errors.nombre ? 'is-invalid' : '')
+                                            if errors.nombre
+                                                small#nombreHelp.text-danger.font-montserrat
+                                                    = errors.nombre.message
+                                        .form-group
+                                            input.form-control(type='text' placeholder='Email *' name='email' value=usuario.email class=errors.email ? 'is-invalid' : '')
+                                            if errors.email
+                                                small#emailHelp.text-danger.font-montserrat
+                                                    = errors.email.message
+                                        .form-group
+                                            input.form-control(type='password' placeholder='Contraseña *' name='password' class=errors.password ? 'is-invalid' : '')
+                                            if errors.password
+                                                small#passwordHelp.text-danger.font-montserrat
+                                                    = errors.password.message
+                                        .form-group
+                                            input.form-control(type='password' placeholder='Confirmar contraseña *' name='confirm_password' class=errors.confirm_password ? 'is-invalid' : '')
+                                            if errors.confirm_password
+                                                small#confirm_passwordHelp.text-danger
+                                                    = errors.confirm_password.message
+                                .text-center
+                                    #success
+                                    button.btn.btn-primary.btn-xl.text-uppercase(type='submit') CREAR USUARIO
+                

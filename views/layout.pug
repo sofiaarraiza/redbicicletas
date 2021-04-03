@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='')
+
+    link(rel='icon' type='image/x-icon' href='../../assets/img/bike-logo2.png')
+    
+    // Font Awesome icons (free version)
+    script(src='https://use.fontawesome.com/releases/v5.13.0/js/all.js' crossorigin='anonymous')
+    
+    // Google fonts
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css')
+    
+    // Core theme CSS (includes Bootstrap)
+    link(href='../../stylesheets/agency.css' rel='stylesheet')
+
+    //Leaflet JS
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' integrity='sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==' crossorigin='')
+    script(src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js' integrity='sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==' crossorigin='')
+
+    link(rel='stylesheet', href='../../stylesheets/style.css')
+  body
+    block navigation
+      // Navigation
+      nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+        .container
+          a.navbar-brand.js-scroll-trigger(href='/') RED DE BICIS
+          button.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+            | Menu
+            i.fas.fa-bars.ml-1
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.text-uppercase.ml-auto
+              li.nav-item
+                a.nav-link.js-scroll-trigger(href='/#mapa') Mapa
+              li.nav-item
+                a.nav-link.js-scroll-trigger(href='/#services') Servicios
+              li.nav-item
+                a.nav-link.js-scroll-trigger(href='/bicicletas#bici') Lista de Bicis
+              li.nav-item
+                a.nav-link.js-scroll-trigger(href='/#team') Nosotras
+              li.nav-item
+                a.nav-link.js-scroll-trigger(href='/login') Log In 
+              li.nav-item
+                a.nav-link.js-scroll-trigger(href='/usuarios/create') Crear cuenta
+    block content
+    block footer
+      // Footer
+      footer.footer.py-4
+        .container
+          .row.align-items-center
+            .col-lg-4.text-lg-left Copyright &copy; Sofía Arraiza 2020
+            .col-lg-4.my-3.my-lg-0
+              a.btn.btn-dark.btn-social.mx-2(href='#!')
+                i.fab.fa-twitter
+              a.btn.btn-dark.btn-social.mx-2(href='#!')
+                i.fab.fa-facebook-f
+              a.btn.btn-dark.btn-social.mx-2(href='#!')
+                i.fab.fa-linkedin-in
+            .col-lg-4.text-lg-right
+              a.mr-3(href='#!') Política de Privacidad
+              a(href='#!') Términos de uso

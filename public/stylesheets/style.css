@@ -1,0 +1,75 @@
+#main_map{
+  height: 600px;
+}
+
+.bg-pattern {
+  background-image: url("../assets/img/pattern.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-forgotpassword {
+  background-image: url("../assets/img/forgotpassword.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-emailsent{
+  background-image: url("../assets/img/emailsent.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.padding-70{
+  padding: 80px;
+}
+
+.margin-bottom{
+  margin-bottom: 30px;
+}
+
+#nuevoUsuario {
+  background-color: #ffe9db;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.font-montserrat{
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.btn-azul{
+  background-color: #015474;
+  color: #fff;
+  border-color: #015474;
+}
+.btn-azul:hover {
+  color: #fff;
+  background-color: #013549;
+  border-color: #013549;
+}
+.btn-azul:focus, .btn-azul.focus {
+  color: #fff;
+  background-color: #015474;
+  border-color: #015474;
+  box-shadow: 0 0 0 0.2rem rgba(254, 216, 84, 0.5);
+}
+.btn-azul.disabled, .btn-azul:disabled {
+  color: #fff;
+  background-color: #013549;
+  border-color: #013549;
+}
+.btn-azul:not(:disabled):not(.disabled):active, .btn-azul:not(:disabled):not(.disabled).active, .show > .btn-azul.dropdown-toggle {
+  color: #fff;
+  background-color: #013549;
+  border-color: #013549;
+}
+.btn-azul:not(:disabled):not(.disabled):active:focus, .btn-azul:not(:disabled):not(.disabled).active:focus, .show > .btn-azul.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(254, 216, 84, 0.5);
+}
